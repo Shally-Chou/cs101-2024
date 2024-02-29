@@ -9,7 +9,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
 #include <stdio.h>
 
 void print_space(int i , int n) {
-    for(int space = 0 ; space <= n-i ; space++) {
+    for(int space = 0 ; space <= n-i-1 ; space++) {
         printf(" ") ;
     }
 }
