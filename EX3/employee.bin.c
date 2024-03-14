@@ -28,18 +28,14 @@ int main()
     emp[2].salary = 90000.000000 ;
     strcpy(emp[2].name , "swift") ;
     
-    FILE* fp = fopen("employee.bin" , "wb+") ;
+   FILE* fp = fopen("employee.bin" , "wb+") ;
     for(int n = 0 ; n < 3 ; n++){
         fwrite(emp+n , sizeof(employee_t) , 1 , fp) ;
-    }
-    int a = 0 ;
-    while(fread(emp+a , sizeof(employee_t) , 1 , fp)){
-        printf("[%d] %d %s\n" , a , emp[a].id , emp[a].name) ;
-        a++ ;
+        fread(emp+n , sizeof(employee_t) , 1 , fp);
+        printf("[%d] %d %s\n" , n , emp[n].id , emp[n].name) ;
     }
     fclose(fp) ;
-    
-    
+
     for(int i = 0 ; i < 3 ; i++){
         printf("employee id = %d\n" , emp[i].id) ;
         printf("employee name = %s\n" , emp[i].name) ;
