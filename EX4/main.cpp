@@ -117,9 +117,9 @@ class BENZ_Car : public Car{
 
 int main(){
    AUDI_Car car2("A1", 2021, 2);
-   cout << car2.get_brand() << " Gas grade = "<< car2.get_Gas_grade()<<endl;
+   cout << car2.get_brand() << " : Gas_grade = "<< car2.get_Gas_grade()<<endl;
    car2.set_gas_grade(95);
-   cout<<car2.get_brand()<<" Gas_grade = "<<car2.get_Gas_grade()<<endl;
+   cout<<car2.get_brand()<<": Gas_grade = "<<car2.get_Gas_grade()<<endl;
    
    car2.fuel_up(300, 95);
    
