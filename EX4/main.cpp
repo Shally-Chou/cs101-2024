@@ -15,12 +15,23 @@ public:
 
     void fuel_up(int v, int gas){
         set_Gas_grade(gas);
-        if(gas != 95){
+        if(v>3000 && gas!=95){
+            cout<<"Error: FueltankCapacity: 3000 but fuel up: "<<v<<endl;
             cout<<"Error: Gas_grade: "<<gas<<" Correct : Gas_grade: 95"<<endl;
+            return ;
         }
         else{
-            cout<<"fuel_up: "<<v<<" Gas_grade: "<<gas<<endl;
+            if(v > 3000){
+                cout<<"Error: FueltankCapacity: 3000 but fuel up: "<<v<<endl;
+            }
+            if(gas != 95){
+                cout<<"Error: Gas_grade: "<<gas<<" Correct : Gas_grade: 95"<<endl;
+            }
+            else{
+                cout<<"fuel_up: "<<v<<" Gas_grade: "<<gas<<endl;
+            }
         }
+   
     }
 
     void set_Gas_grade(int Gas_grade){
