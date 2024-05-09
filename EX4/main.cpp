@@ -69,11 +69,8 @@ class Car{
         
         void fuel_up(int v, int gas = 98){
             m_Fueltank.fuel_up(v, gas);
-        }
-        
-        
-        
-    
+        }   
+
 };
 
 class BMW_Car : public Car{
